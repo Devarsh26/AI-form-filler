@@ -1,0 +1,108 @@
+{
+    "title": "Visa Sample Application Form",
+    "description": "Please fill out this form to apply for our program",
+    "fields": [
+       
+        {
+            "name": "US Citizen",
+            "type": "radio",
+            "description": "User must answer yes or no, if yes they must provide their SSN number, if no continue to next question",
+            "required": true,
+            "options": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              },
+              {
+                "value": "Other",
+                "label": "Other"
+              }
+            ],
+            "min_selections": 1,
+            "max_selections": 1
+          },
+        {
+            "visibility" : "Yes if previous answer to US citizen is yes",
+            "name": "SSN",
+            "type": "number",
+            "required": true,
+            "description": "User must answer yes or no, if yes they must provide their SSN number, if no continue to next question"
+        },
+        {
+            "visibility" : "Yes if previous answer to US citizen is yes",
+            "name": "I-94 Last Date of Return",
+            "type": "date",
+            "required": true,
+            "description": "The date of your last return to the United States, can be found online"
+        },
+        
+        {
+            "name": "First Name",
+            "type": "text",
+            "required": true,
+            "description": "Enter your full legal name as it appears on your government-issued ID",
+            "validation": "ONLY requirement: Input must start with 'H'. The first letter must be uppercase 'H'. Example: 'Harrison'"
+        },
+         {
+            "name": "Phone Number",
+            "type": "tel",
+            "required": false,
+            "description": "Your primary contact number"
+        },
+        {
+            "name": "Email Address",
+            "type": "email",
+            "required": true,
+            "description": "Your primary email address"
+        },
+        
+        {
+            "name": "Current Address",
+            "type": "text",
+            "required": true,
+            "description": "Your current residential address"
+        },
+        {
+            "name": "Education Level",
+            "type": "radio",
+            "description": "Highest level of education completed?",
+            "required": false,
+            "options": [
+              {
+                "value": "Masters",
+                "label": "Masters"
+              },
+              {
+                "value": "Bachelors",
+                "label": "Bachelors"
+              },
+              {
+                "value": "High School",
+                "label": "High School"
+              },
+              {
+                "value": "None",
+                "label": "None"
+              }
+            ],
+            "min_selections": 1,
+            "max_selections": 3
+          },
+        {
+            "name": "Years of Experience",
+            "type": "number",
+            "required": true,
+            "description": "Total years of relevant work experience"
+        },
+        {
+            "name": "Additional Comments",
+            "type": "text",
+            "required": false,
+            "description": "Any additional information you'd like to provide"
+        }
+    ]
+} 
